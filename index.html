@@ -10,6 +10,7 @@
         <link href="css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
         <link href="css/style.min.css" media="all" type="text/css" rel="stylesheet">
         <link href="css/theme.css" media="all" type="text/css" rel="stylesheet">
+        <link href="css/mods.css" media="all" type="text/css" rel="stylesheet">
 
         <!-- fonts -->
         <link href="css/fonts.css" media="all" type="text/css" rel="stylesheet">
@@ -22,57 +23,6 @@
         <script src="js/waypoints.min.js"></script>
         <script src="js/waypoints-sticky.js"></script>
         <script src="js/plugins.js"></script>
-
-        <style>
-            body {
-                color: #969696;
-            }
-            header #logo a {
-                background: none;
-
-                color: #FFFFFF;
-                font-size: 16px;
-                font-weight: 300;
-                display: inline;
-                text-transform: uppercase;
-            }
-
-            .page, .page-alternate {
-                text-align: left;
-            }
-
-            .title-page {
-                margin-bottom: 0px !important;
-            }
-
-            .list-no-bullet {
-                list-style: none;
-            }
-
-            .code-txt {
-                /* make sure we have a block-el */
-                display: block;
-
-                /* reset backgrounds / borders /colors */
-                border: none;
-                background-color: transparent;
-                color: inherit;
-
-                /* margins in and out of text */
-                margin: 0px;
-                padding-left: 10px;
-                font-size: x-small !important;
-                line-height: normal !important;;
-
-                /* white-space corrections */
-                white-space: pre;
-                white-space: pre-wrap;
-                word-wrap: break-word;
-                word-break: break-all;
-
-                border-left: 5px solid #DE5E60;
-            }
-        </style>
     </head>
     <body>
 
@@ -104,7 +54,7 @@
                         <div class="title-page">
                             <h2 class="title">Projects</h2>
                             <!--<h3 class="title-description">Software Products and Projects</h3>-->
-                            <p>Hi, I'm Matt - I design and build software systems.  I've worked in firmware, web, and everything in-between.  My personal interests include <a href="#privatepanda">privacy</a>, security, <a href="#thesquatrack">fitness</a>, and heavy metal.</p>
+                            <p>Hi, I'm Matt - I design and build software systems.  I've worked in firmware, web, and everything in-between.  My personal interests include <a href="#thesquatrack">fitness</a>, <a href="#dirtyboots">privacy</a>, <a href="#privatepanda">security</a>, and heavy metal.</p>
                             <div id="thesquatrack"></div>
                             <hr />
                         </div>
@@ -118,7 +68,7 @@
                             <div class="icon">
                                 <span class="fa fa-bar-chart"></span>
                             </div>
-                            <h3>TheSquatRack</h3>
+                            <h3><a href="https://thesquatrack.com/">TheSquatRack</a></h3>
                             <p>Fitness and health tracking, with comprehensive tools, analytics, and social layer.</p><div id="social-area">
                             <div class="social-area">
                                 <nav class="social">
@@ -156,6 +106,59 @@
                     </div>
                 </div>
 
+                <div id="dirtyboots"></div>
+                <hr />
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="services-box">
+                            <div class="icon">
+                                <span class="fa fa-cloud-upload"></span>
+                            </div>
+                            <h3><a href="dirtyboots.html">DirtyBoots</a></h3>
+                            <p>Web browser automation to obscure between genuine and fake browsing sessions</p>
+                            <div class="social-area">
+                                <nav class="social">
+                                    <ul>
+                                        <li><a href="dirtyboots.html" title="DirtyBoots"><span class="font-icon-home"></span></a></li>
+                                        <li><a href="https://github.com/m-kal/DirtyBoots" target="_blank" title="DirtyBoots"><span class="fa fa-github-square"></span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3>Automated Privacy Enhancement</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p><a href="dirtyboots.html">DirtyBoots</a> automates web browsing and mimics your browsing pattern, so your network traffic and online activity appear normal while away from keyboard / home.</p>
+                                <p>Import your Firefox and/or Chrome browser histories and DirtyBoots will browse the internet in a similar manner.  Use whitelists or blacklists to filter browsing history, or add a url-handler to execute when matched urls match specified regex.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li><strong class="color-text">Browser Support</strong>
+                                        <p>Firefox, Chrome, and Internet Explorer</p>
+                                    </li>
+                                    <li><strong class="color-text">Flexibility</strong>
+                                        <p>.conf files and CLI args provide easy scripting</p>
+                                    </li>
+                                    <li><strong class="color-text">Features</strong>
+                                        <p>White/Black lists, manual searches, error-prone typing, and more</p>
+                                    </li>
+                                    <li>
+                                    <li><strong class="color-text">License</strong>
+                                        <p>
+                                            <span class="color-text">[</span>
+                                            <a href="https://github.com/m-kal/DirtyBoots/blob/master/LICENSE">GNU General Public License v3</a>
+                                            <span class="color-text">]</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="privatepanda"></div>
                 <hr />
 
@@ -165,7 +168,7 @@
                             <div class="icon">
                                 <span class="fa fa-lock"></span>
                             </div>
-                            <h3>PrivatePanda</h3>
+                            <h3><a href="https://github.com/m-kal/PrivatePanda">PrivatePanda</a></h3>
                             <p>Hardens Firefox's security and privacy settings.</p>
                             <div class="social-area">
                                 <nav class="social">
@@ -177,7 +180,7 @@
                         </div>
                     </div>
                     <div class="col-lg-8">
-                        <h3>A More Secure and Private Browsing Experience</h3>
+                        <h3>A More Secure and Private Browsing Configuration</h3>
                         <div class="row">
                             <div class="col-lg-6">
                                 <p><a href="#privatepanda">PrivatePanda</a> is a script for <a href="https://mozilla.com/firefox" target="_blank" title="Firefox Homepage">Firefox</a> to harden the security and privacy settings of the browser.  PrivatePanda changes settings in the <em>about:config</em> to remove geolocation, social media, Google services and servers.  Additionally, PrivatePanda cleans up all browsing history and cookies on every shutdown.</p>
@@ -193,6 +196,13 @@
                                     </li>
                                     <li><strong class="color-text">Cleans Up</strong>
                                         <p>Clears all history and cache files on shutdown.</p>
+                                    </li>
+                                    <li><strong class="color-text">License</strong>
+                                        <p>
+                                            <span class="color-text">[</span>
+                                            <a href="https://github.com/m-kal/PrivatePanda/blob/master/LICENSE">GNU Lesser General Public License v3</a>
+                                            <span class="color-text">]</span>
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
