@@ -83,9 +83,12 @@
                             <li>Website filtering and exclusion with white/black lists</li>
                             <li>Site plugins to expand per-site features and abilities</li>
                             <li>Delayed/timer-triggered browsing</li>
-                            <li>Increased errors / slower typing between 8pm-midnight Friday/Saturday</li>
+                            <li>Increased errors / slower typing between 8pm-midnight Fri/Sat</li>
                             <li>Easy logging and configuration</li>
                         </ul>
+
+                        <h2 id="license">License</h2>
+                        <p>DirtyBoots is licensed under <a href="https://github.com/m-kal/DirtyBoots/blob/master/LICENSE">GNU GPL v3</a>, have fun!</p>
                     </div>
                     <div class="col-lg-6">
                         <h2>Source Code</h2>
@@ -276,19 +279,19 @@
                 <h3>Please explain every variable in the configuration file (boots.conf)</h3>
                 <p>
                     <dl class="dl-horizontal">
-                        <dt>NoRepeats</dt><dd>When <span class="color-text">True</span>, a URL will not be visited more than once per run</dd>
-                        <dt>WhitelistFile</dt><dd>Location of a blacklist file containing regex of URLs to include</dd>
-                        <dt>BlacklistFile</dt><dd>Location of a blacklist file containing regex of URLs to exclude</dd>
-                        <dt>DefaultBrowser</dt><dd>Default browser to use for simulated browsing</dd>
-                        <dt>Selfies</dt><dd>When <span class="color-text">True</span>, captures screenshot for each URL and merges into video at end</dd>
-                        <dt>SelfiesDir</dt><dd>Path to directory for storing website screenshots</dd>
-                        <dt>HistoryWindowdays</dt><dd>For debugging with urlHistory, number of days for history window</dd>
-                        <dt>FuzzyTyping</dt><dd>When <span class="color-text">True</span>, user-typing will inject errors</dd>
-                        <dt>TypingErrRate</dt><dd>The % of keys that will be mis-typed</dd>
+                        <dt>NoRepeats</dt><dd>When <span class="color-text">True</span>, a URL will <span class="light-text">not be visited more than once</span> per run</dd>
+                        <dt>WhitelistFile</dt><dd>Location of a blacklist file containing regex of <span class="light-text">URLs to include</span></dd>
+                        <dt>BlacklistFile</dt><dd>Location of a blacklist file containing regex of <span class="light-text">URLs to exclude</span></dd>
+                        <dt>DefaultBrowser</dt><dd>Default <span class="light-text">browser to use</span> for simulated browsing</dd>
+                        <dt>Selfies</dt><dd>When <span class="color-text">True</span>, <span class="light-text">captures screenshot for each URL</span> and merges into video at end</dd>
+                        <dt>SelfiesDir</dt><dd>Path to directory for <span class="light-text">storing website screenshots</span></dd>
+                        <dt>HistoryWindowdays</dt><dd>For debugging with urlHistory, <span class="light-text">number of days for history</span> window</dd>
+                        <dt>FuzzyTyping</dt><dd>When <span class="color-text">True</span>, user-typing will <span class="light-text">inject errors</span></dd>
+                        <dt>TypingErrRate</dt><dd>The % of keys that will be <span class="light-text">mis-typed</span></dd>
                         <dt>DrunkenWeekends</dt><dd>When <span class="color-text">True</span> and a Fri/Sat evening, typing errors increase and typing rate decreases</dd>
-                        <dt>HistoryDB</dt><dd>Path to the DirtyBoots history database / sqlite file</dd>
-                        <dt>HTTPS</dt><dd>When <span class="color-text">True</span>, only HTTPS links will be visited</dd>
-                        <dt>TypingWPM</dt><dd>Words-per-minute typing speed, based on an average of 5 characters per word</dd>
+                        <dt>HistoryDB</dt><dd>Path to the DirtyBoots <span class="light-text">history database / sqlite file</span></dd>
+                        <dt>HTTPS</dt><dd>When <span class="color-text">True</span>, <span class="light-text">only HTTPS links</span> will be visited</dd>
+                        <dt>TypingWPM</dt><dd>Words-per-minute <span class="light-text">typing speed</span>, based on an average of 5 characters per word</dd>
                     </dl>
                 </p>
             </div>
@@ -298,9 +301,7 @@
 
 <footer>
     <p class="credits">
-        <span class="color-text">[</span>
-        <small>&copy; 2014</small>
-        <span class="color-text">]</span>
+        <code><span class="color-text">[</span><small>&copy; 2014</small><span class="color-text">]</span></code>
     </p>
 </footer>
 <script type="text/javascript">

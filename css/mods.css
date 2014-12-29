@@ -55,6 +55,10 @@ code,
 .light-text {
     color: #FFFFFF;
 }
+dl dt {
+    color: #FFFFFF;
+    font-weight: 300;
+}
 .code-txt {
     /* make sure we have a block-el */
     display: block;
