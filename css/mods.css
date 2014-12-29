@@ -37,7 +37,7 @@ code,
     /* reset backgrounds / borders /colors */
     border: none;
     background-color: #2F3238;
-    color: inherit;
+    color: #ccc;
 
     font-size: small !important;
     line-height: normal !important;
@@ -52,6 +52,9 @@ code,
     border-radius: 0 !important;
 }
 
+.light-text {
+    color: #FFFFFF;
+}
 .code-txt {
     /* make sure we have a block-el */
     display: block;

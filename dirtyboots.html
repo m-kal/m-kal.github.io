@@ -88,6 +88,13 @@
                         </ul>
                     </div>
                     <div class="col-lg-6">
+                        <h2>Source Code</h2>
+
+                        <p>DirtyBoots is hosted at <a href="https://github.com/m-kal/DirtyBoots" target="_blank">github.com/m-kal/DirtyBoots
+                            <i class="fa fa-external-link-square"></i></a> and the official homepage is hosted at <a
+                                href="dirtyboots.html">m-kal.com/dirtyboots</a>.
+                        </p>
+
                         <h2 id="use-cases">Use Cases</h2>
                         <ul>
                             <li>Obscure and distort network traffic patterns</li>
@@ -228,10 +235,6 @@
                 <a id="faq"></a><br />
                 <h2 id="help">Help</h2>
 
-                <h3>Where can I download the source code?</h3>
-                <p>DirtyBoots is hosted at <a href="https://github.com/m-kal/DirtyBoots" target="_blank">github.com/m-kal/DirtyBoots <i class="fa fa-external-link-square"></i></a> and the official homepage is hosted at <a href="dirtyboots.html">m-kal.com/dirtyboots.html</a>.
-                </p>
-
                 <h3>Sometimes I want DirtyBoots to behave one way, and other times another way.  What do?</h3>
                 <p>DirtyBoots uses configuration files (.conf) as well as command line arguments to augment and modify DirtyBoots behavior.  Using the CLI arg <code>--config [CONFIG]</code>, one can provide a configuration file other than the default.  This enables you to have multiple databases, white/black lists, etc. and manage them with ease.</p>
 
@@ -273,18 +276,18 @@
                 <h3>Please explain every variable in the configuration file (boots.conf)</h3>
                 <p>
                     <dl class="dl-horizontal">
-                        <dt>NoRepeats</dt><dd>When True, a URL will not be visited more than once per run</dd>
+                        <dt>NoRepeats</dt><dd>When <span class="color-text">True</span>, a URL will not be visited more than once per run</dd>
                         <dt>WhitelistFile</dt><dd>Location of a blacklist file containing regex of URLs to include</dd>
                         <dt>BlacklistFile</dt><dd>Location of a blacklist file containing regex of URLs to exclude</dd>
                         <dt>DefaultBrowser</dt><dd>Default browser to use for simulated browsing</dd>
-                        <dt>Selfies</dt><dd>When True, captures screenshot for each URL and merges into video at end</dd>
+                        <dt>Selfies</dt><dd>When <span class="color-text">True</span>, captures screenshot for each URL and merges into video at end</dd>
                         <dt>SelfiesDir</dt><dd>Path to directory for storing website screenshots</dd>
                         <dt>HistoryWindowdays</dt><dd>For debugging with urlHistory, number of days for history window</dd>
-                        <dt>FuzzyTyping</dt><dd>When True, user-typing will inject errors</dd>
+                        <dt>FuzzyTyping</dt><dd>When <span class="color-text">True</span>, user-typing will inject errors</dd>
                         <dt>TypingErrRate</dt><dd>The % of keys that will be mis-typed</dd>
-                        <dt>DrunkenWeekends</dt><dd>When True and a Fri/Sat evening, typing errors increase and typing rate decreases</dd>
+                        <dt>DrunkenWeekends</dt><dd>When <span class="color-text">True</span> and a Fri/Sat evening, typing errors increase and typing rate decreases</dd>
                         <dt>HistoryDB</dt><dd>Path to the DirtyBoots history database / sqlite file</dd>
-                        <dt>HTTPS</dt><dd>When True, only HTTPS links will be visited</dd>
+                        <dt>HTTPS</dt><dd>When <span class="color-text">True</span>, only HTTPS links will be visited</dd>
                         <dt>TypingWPM</dt><dd>Words-per-minute typing speed, based on an average of 5 characters per word</dd>
                     </dl>
                 </p>
