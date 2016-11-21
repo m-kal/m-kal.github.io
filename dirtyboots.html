@@ -12,8 +12,6 @@
     <link href="css/theme.css" media="all" type="text/css" rel="stylesheet">
     <link href="css/mods.css" media="all" type="text/css" rel="stylesheet">
 
-    <script src="js/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <!-- fonts -->
     <link href="css/fonts.css" media="all" type="text/css" rel="stylesheet">
     <link href="css/font-awesome.min.css" media="all" type="text/css" rel="stylesheet">
@@ -114,45 +112,43 @@
                 <a id="docs"></a><br />
                 <h2 id="usage">Usage</h2>
 
-                <p>Getting started with <span class="light-text">DirtyBoots</span> is simple and only requires a couple commands.  Initialize configuration and database, import browser databases if needed, and launch <span class="light-text">DirtyBoots</span>.  Below is a quick-start guide to get you up and running, followed by documentation on each command.</p>
+                <p>Getting started with <span class="light-text">DirtyBoots</span> is simple and only requires a couple commands.  Initialize configuration and database, import browser databases if needed, and launch <span class="light-text">DirtyBoots</span>.  Beow is a quick-start guide to get you up and running, followed by documentation on each command.</p>
 
                 <h3 id="quick-start">Quick-Start</h3>
-<pre class="code-txt"><code class="python"># create conf with defaults [boots.conf]
-<strong>dirtyboots.py config</strong>
+<code class="code-txt"># setup / install
+<strong>python setup.py install</strong>
+
+# create conf with defaults [boots.conf]
+<strong>dirtyboots config</strong>
 
 # init database with default filename [history.sqlite]
-<strong>dirtyboots.py initdb</strong>
+<strong>dirtyboots initdb</strong>
 
 # import a Firefox profile's browsing history
-<strong>dirtyboots.py importdb /Path/To/Firefox/Profile/places.sqlite --browser firefox</strong>
-
-# Removes a Firefox profile's browsing history for URL/regex in our text file
-<strong>dirtyboots.py prune /Path/To/Firefox/Profile/places.sqlite plums.txt --browser firefox</strong>
+<strong>dirtyboots importdb /Path/To/Firefox/Profile/places.sqlite --browser firefox</strong>
 
 # import a Chrome profile's browsing history
-<strong>dirtyboots.py importdb /Path/To/Chrome/Profile/History --browser chrome</strong>
+<strong>dirtyboots importdb /Path/To/Chrome/Profile/History --browser chrome</strong>
 
 # start browsing
-<strong>dirtyboots.py run</strong>
+<strong>dirtyboots run</strong>
 
 # alternative run (from text file)
-<strong>dirtyboots.py txt /Path/To/Text/File/of/Urls.txt</strong>
-</code></pre>
+<strong>dirtyboots txt /Path/To/Text/File/of/Urls.txt</strong>
+</code>
 <p>The main commands are,</p>
 
 <code class="code-txt"><strong>run</strong>                             Run the program
 <strong>txt</strong>                             Run the program from a newline-delimited text file of urls
 <strong>initdb</strong>                          Creates database for browsing history and stats
 <strong>cleardb</strong>                         Clears existing browsing history database
-<strong>prune</strong>                           Removes a web browser's history based on regex from a
-                                    newline-delimited text file
 <strong>importdb</strong>                        Imports a web browser's history
 <strong>config</strong>                          Create a default configuration file
 </code>
 
 <p>All commands support the following options</p>
 
-<code class="code-txt"><strong>dirtyboots.py [CMD] [options]</strong>
+<code class="code-txt"><strong>dirtyboots.py [CMD] [OPTIONS]</strong>
 
     -h, --help                  Show this help message and exit
     --no-ts                     Disable timestamps during logging
@@ -165,7 +161,7 @@
 
                 <p>Launch cruise-control for websites</p>
 
-<code class="code-txt"><strong>dirtyboots.py run [options]</strong>
+<code class="code-txt"><strong>dirtyboots.py run [OPTIONS]</strong>
 
     --https                     Skip not-HTTPS links
     --drunk                     Enable drunk typing regardless of day/time
@@ -185,7 +181,7 @@
 
                 <p>Run the program from a newline-delimited text file of urls rather than a sqlite database.</p>
 
-<code class="code-txt"><strong>dirtyboots.py txt [TXTFILE] [options]</strong>
+<code class="code-txt"><strong>dirtyboots.py txt [TXTFILE] [OPTIONS]</strong>
 
     txtFile                     Newline delimited text file of URLs
     --https                     Skip not-HTTPS links
@@ -209,7 +205,7 @@
 
                 <p>Creates database for browsing history and stats</p>
 
-<code class="code-txt"><strong>dirtyboots.py initdb [options]</strong>
+<code class="code-txt"><strong>dirtyboots.py initdb [OPTIONS]</strong>
 
     --location  [LOCATION]      Location to create the database</code>
 
@@ -217,7 +213,7 @@
 
                 <p>Clears existing browsing history database</p>
 
-<code class="code-txt"><strong>dirtyboots.py cleardb [options]</strong>
+<code class="code-txt"><strong>dirtyboots.py cleardb [OPTIONS]</strong>
 
     --location  [LOCATION]      Location to create the database</code>
 
@@ -225,32 +221,17 @@
 
                 <p>Import database for browsing history and stats</p>
 
-<code class="code-txt"><strong>dirtyboots.py importdb [DATABASE] [options]</strong>
+<code class="code-txt"><strong>dirtyboots.py importdb [DATABASE] [OPTIONS]</strong>
 
     database                    Browser database file (ex: places.sqlite or History)
     --browser   [BROWSER]       Browser database type [{firefox,chrome}]
     --location  [LOCATION]      Location to create the database
 </code>
-
-                <h3 id="importdb">Prune</h3>
-
-<strong></strong>
-                
-                <p>Removes a Firefox profile's browsing history for URL/regex in our text file</p>
-
-<code class="code-txt"><strong>dirtyboots.py prune [DATABASE] [PLUMS] [options]</strong>
-
-    database                    Browser database file (ex: places.sqlite or History)
-    plums                       File containing regex of websites to remove from a
-                                    web browser's history
-    --browser   [BROWSER]       Browser database type [{firefox,chrome}]
-</code>
-
                 <h3 id="config">Config</h3>
 
                 <p>Create a default configuration file</p>
-                
-<code class="code-txt"><strong>dirtyboots.py config [options]</strong>
+
+<code class="code-txt"><strong>dirtyboots.py config [OPTIONS]</strong>
 
     --config    [CONFIG]        Config file load (.conf)</code>
 
